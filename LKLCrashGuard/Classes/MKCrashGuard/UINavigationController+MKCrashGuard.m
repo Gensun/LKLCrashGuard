@@ -21,10 +21,10 @@ static const char mkNavigationControllerAssociatedKey;
 @implementation UINavigationController (MKCrashGuard)
 
 + (void)guardNavigationController {
-//    mk_swizzleInstanceMethod(self, @selector(pushViewController:animated:), @selector(guardPushViewController:animated:));
-//    mk_swizzleInstanceMethod(self, @selector(popViewControllerAnimated:), @selector(guardPopViewControllerAnimated:));
-//    mk_swizzleInstanceMethod(self, @selector(popToRootViewControllerAnimated:), @selector(guardPopToRootViewControllerAnimated:));
-//    mk_swizzleInstanceMethod(self, @selector(popToViewController:animated:), @selector(guardPopToViewController:animated:));
+    mk_swizzleInstanceMethod(self, @selector(pushViewController:animated:), @selector(guardPushViewController:animated:));
+    mk_swizzleInstanceMethod(self, @selector(popViewControllerAnimated:), @selector(guardPopViewControllerAnimated:));
+    mk_swizzleInstanceMethod(self, @selector(popToRootViewControllerAnimated:), @selector(guardPopToRootViewControllerAnimated:));
+    mk_swizzleInstanceMethod(self, @selector(popToViewController:animated:), @selector(guardPopToViewController:animated:));
 }
 
 - (void)setViewTransitionInProgress:(BOOL)property {

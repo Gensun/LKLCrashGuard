@@ -32,10 +32,10 @@
         [NSObject guardUnrecognizedSelectorCrash];
         [NSTimer guardTimerCrash];
         [NSNotificationCenter guardNotificationCrash];
-        [NSObject guardKVOCrash];
+//        [NSObject guardKVOCrash];
         [NSObject guardKVCCrash];
 
-        [UINavigationController guardNavigationController];
+//        [UINavigationController guardNavigationController];
     });
 }
 

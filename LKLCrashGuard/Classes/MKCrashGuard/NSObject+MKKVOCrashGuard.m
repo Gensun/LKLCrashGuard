@@ -181,9 +181,9 @@ MK_SYNTH_DUMMY_CLASS(NSObject_MKKVOCrashGuard)
 @implementation NSObject (MKKVOCrashGuard) 
 
 + (void)guardKVOCrash {
-//    mk_swizzleInstanceMethod([self class], @selector(addObserver:forKeyPath:options:context:), @selector(guardAddObserver:forKeyPath:options:context:));
-//    mk_swizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:), @selector(guardRemoveObserver:forKeyPath:));
-//    mk_swizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:context:), @selector(guardRemoveObserver:forKeyPath:context:));
+    mk_swizzleInstanceMethod([self class], @selector(addObserver:forKeyPath:options:context:), @selector(guardAddObserver:forKeyPath:options:context:));
+    mk_swizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:), @selector(guardRemoveObserver:forKeyPath:));
+    mk_swizzleInstanceMethod([self class], @selector(removeObserver:forKeyPath:context:), @selector(guardRemoveObserver:forKeyPath:context:));
 }
 
 - (void)guardAddObserver:(NSObject *)observer forKeyPath:(NSString *)keyPath options:(NSKeyValueObservingOptions)options context:(void *)context {
