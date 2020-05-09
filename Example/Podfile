@@ -1,0 +1,13 @@
+use_frameworks!
+
+platform :ios, '8.0'
+
+target 'LKLCrashGuard_Example' do
+  pod 'LKLCrashGuard', :path => '../'
+
+  target 'LKLCrashGuard_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
