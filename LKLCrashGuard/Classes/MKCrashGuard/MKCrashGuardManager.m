@@ -30,7 +30,7 @@
         [NSMutableAttributedString crashGuardExchangeMethod];
 
         [NSObject guardUnrecognizedSelectorCrash];
-        [NSTimer guardTimerCrash];
+//        [NSTimer guardTimerCrash];
         [NSNotificationCenter guardNotificationCrash];
 //        [NSObject guardKVOCrash];
         [NSObject guardKVCCrash];
